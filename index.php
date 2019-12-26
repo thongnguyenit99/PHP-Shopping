@@ -31,7 +31,7 @@
 <div id ="wrapper">
     <?php
         include "modules/mHeader.php";
-        include "modules/mSidebar.php";
+        //include "modules/mSidebar.php";
         ?>
     <div id="content">
         <?php
