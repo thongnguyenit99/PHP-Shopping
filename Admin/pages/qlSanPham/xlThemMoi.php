@@ -1,22 +1,19 @@
 <?php
    include "../../../lib/DataProvider.php";
-
-   if(isset($_GET["txtTen"]))
+   if(isset($_POST["txtTen"]))
    {
-       $ten = $_GET["txtTen"];
-       $id = $_GET["id"];
-       $hinh=$_GET['fHinh'];
-       $gia=$_GET['txtGia'];
-       $hang=$_GET['cmbHang'];
-       $loai=$_GET['cmbLoai'];
-       $slton=$_GET['txtTon'];
-       $slban=$_GET['txtBan'];
-       $mota=$_GET['txtMoTa'];
-
-       $sql = "INSERT INTO SanPham(TenSanPham,HinhURL,GiaSanPham,SoLuongTon,SoLuongBan,NhaSanXuat,MoTa, BiXoa)
-        VALUES('$ten','$hinh','$gia','$slton','$slban','$hang','$mota',0)";
+       $ten = $_POST["txtTen"];
+       $hang = $_POST["cmbHang"];
+     //  $hinh = $_FILES["fHinh"];
+       $gia = $_POST["txtGia"];
+       $ton = $_POST["txtTon"];
+       $mota = $_POST["txtMoTa"];
+       $loai = $_POST["cmbLoai"];
+       $xuatxu = $_POST["txtXx"];
+       $ngay=$_POST["txtN"];
+       $sql = "INSERT INTO sanpham(TenSanPham, HinhURL,GiaSanPham,SoLuongTon,MoTa,MaLoaiSanPham,MaHangSanXuat,XuatXu,NgayNhap,BiXoa) 
+       VALUES('$ten','$hinh','$gia','$ton','$mota','$loai','$hang','$xuatxu','$ngay',0)";
        DataProvider::ExecuteQuery($sql);
    }
-
    DataProvider::ChangeURL("../../index.php?c=2");
 ?>

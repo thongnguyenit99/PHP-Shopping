@@ -52,7 +52,8 @@
                   <td>
                     
                      <button type="button" class="btn btn-danger" 
-                     onclick="window.location.href='pages/qlTaiKhoan/xlKhoa.php?id=<?= $row['MaTaiKhoan'] ?>'"  style="margin-left:15px;margin-top:5px;margin-bottom:5px">Xoá tài khoản</button>
+                     onclick="window.location.href='pages/qlTaiKhoan/xlKhoa.php?id=<?= $row['MaTaiKhoan'] ?>'"  
+                     style="margin-left:15px;margin-top:5px;margin-bottom:5px">Xoá tài khoản</button>
                     <button type="button" class="btn btn-primary" 
                      onclick="window.location.href='index.php?c=1&a=2&id=<?= $row['MaTaiKhoan'] ?>'"  style="margin-left:10px;">Cập nhật</button>
                 </td>

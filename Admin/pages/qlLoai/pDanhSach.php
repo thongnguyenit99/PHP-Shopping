@@ -43,7 +43,8 @@
                     <td>
                      
                       <button type="button" class="btn btn-danger" 
-                     onclick="window.location.href='pages/qlLoai/xlKhoa.php?id=<?php echo $row['MaLoaiSanPham'] ?>'"   style="margin-left:15px;margin-top:5px;margin-bottom:5px">Xoá loại </button>
+                     onclick="window.location.href='pages/qlLoai/xlKhoa.php?id=<?php echo $row['MaLoaiSanPham'] ?>'" 
+                       style="margin-left:15px;margin-top:5px;margin-bottom:5px">Xoá loại </button>
                      <button type="button" class="btn btn-primary" 
                      onclick="window.location.href='index.php?c=3&a=2&id=<?= $row['MaLoaiSanPham'] ?>'"  style="margin-left:10px;">Cập nhật loại</button>
                     </td>

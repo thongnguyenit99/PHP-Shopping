@@ -49,9 +49,11 @@
                        <td><?php echo $row["TenTinhTrang"]; ?></td>       
                   <td>
                      <button type="button" class="btn btn-danger" 
-                     onclick="window.location.href='pages/qlDonDatHang/xlKhoa.php?id=<?= $row['MaDonDatHang'] ?>'"  style="margin-left:15px;margin-top:5px;margin-bottom:5px">Xoá đơn hàng</button>
+                     onclick="window.location.href='pages/qlDonDatHang/xlKhoa.php?id=<?php echo $row['MaDonDatHang'] ?>'"  
+                     style="margin-left:15px;margin-top:5px;margin-bottom:5px">Xoá đơn hàng</button>
+                     
                     <button type="button" class="btn btn-primary" 
-                     onclick="window.location.href='index.php?c=5&a=2&id=<?= $row['MaDonDatHang'] ?>'"  style="margin-left:10px;">Chi tiết đơn hàng</button>
+                     onclick="window.location.href='index.php?c=5&a=2&id=<?php echo $row['MaDonDatHang'] ?>'"  style="margin-left:10px;">Chi tiết đơn hàng</button>
                 </td>
              </tr>
          <?php

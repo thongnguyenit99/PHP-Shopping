@@ -77,16 +77,16 @@ if (isset($_POST['dangky'])) {
     }    
 }
 ?>
-
-<h2>Tạo tài khoản mới</h1>
 <div class="container">
+<h1 class="ptk" style="margin-top:20%;margin-left:5%;color:orange">Tạo tài khoản mới</h1>
+
      <?php
                 if (isset($errMsg)) {
                     echo '<div style="color:#FF0000;text-align:left;font-size:17px;">' . $errMsg . '</div>';
                 }
                 
                 if (isset($success)) {
-                    echo '<div style="color:#0000FF;text-align:left;font-size:15px;">' . $success . '</div>';
+                    echo '<div style="color:#0000FF;text-align:left;font-size:17px;">' . $success . '</div>';
                 }
                 ?>
 <form action="" method="post">
@@ -189,6 +189,7 @@ if (isset($_POST['dangky'])) {
     </div>
 </form>
 </div>
+
 
 <?php
     if(isset($_GET["err"]))

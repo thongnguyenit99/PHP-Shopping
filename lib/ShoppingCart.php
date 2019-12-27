@@ -10,11 +10,14 @@
         }
         // hàm user cập nhật giở hàng
         public function update($id, $newNum){
+            // xét vòng lặp tìm số sp có trong gio hang
             for($i=0; $i<count($this->listProduct); $i++)
             {
-                if($this->listProduct[$i]->id== $id){
-                    $this->listProduct[$i]->num== $newNum;
-                }
+                //nếu tìm sản phẩm nào đó mà đúng id thì mình sẽ
+                 if($this->listProduct[$i]->id== $id)
+                 // thây đổi số lượng trong input qua số lượng mình thay đổi mới
+                $this->listProduct[$i]->num=$newNum;
+                
             }
         }
         // hàm user xoá giở hàng
@@ -22,6 +25,7 @@
             for($i=0; $i<count($this->listProduct); $i++)
             {
                 if($this->listProduct[$i]->id== $id){
+                    // xóa phần tử trong mảng và thay thế bằng một phần tử hoặc một số phần tử khác.
                     array_splice($this->listProduct,$i,1);
                 }
             }

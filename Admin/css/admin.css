@@ -38,10 +38,14 @@ body{
 }
 #login{
     float: right;
-    color: white;
+    color: black;
 }
 
 #login a{
+    text-decoration: none;
+    color: blue;
+}
+#login a:hover{
     text-decoration: none;
     color: white;
 }
@@ -98,7 +102,7 @@ table{
 }
 .roww{
     margin-top: 5%;
-    margin-left: 40%;
+    margin-left: 35%;
 }
 .roww button{
     margin-top: 1%;
@@ -120,4 +124,31 @@ font-weight: bold;
   
     
 
+}
+.ipt{
+    float: right;
+    margin-right:58%;
+    width: 25%;
+}
+.flt{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+.sp1{
+    margin: 1%;
+        
+
+}
+.sbm{
+    margin-top: 2%;
+}
+.ipt1{
+    float: right;
+    margin-right:58%;
+    width: 25%;
+    height: 150px;
+}
+.dx a{
+    color: blue;
 }

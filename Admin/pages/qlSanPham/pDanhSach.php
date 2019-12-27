@@ -54,13 +54,14 @@
                   <td>
                       <?php
                          if(strlen($row["BiXoa"]) > 20)
+                         // sd hàm substr để cắt chuỗi
                              $sMoTa = substr($row["MoTa"], 0, 20)."...";
                          else 
                              $sMoTa = $row["MoTa"];
-                        echo $sMoTa;
+                       // echo $sMoTa;
                        ?>
                        <div class="fullMoTa">
-                           <?php echo $row["MoTa"]; ?>
+                           <?= $row["MoTa"]; ?>
                         </div>
                   </td>
                   <td>

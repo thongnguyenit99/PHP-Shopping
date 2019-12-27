@@ -4,11 +4,11 @@
         <div class="roww ">
           <div id="error"></div>
        <span>Tên sản phẩm:</span>
-       <input type="text" class="form-control" style="width:350px" name="txtTen" id="txtTen" />
+       <input type="text" class="form-control" style="width:400px" name="txtTen" id="txtTen" />
 
    <div>
        <span>Hãng sản xuất</span>
-       <select name="cmbHang" class="form-control" style="width:350px" >
+       <select name="cmbHang" class="form-control" style="width:400px" >
           <?php  
               $sql = "SELECT *FROM HangSanXuat WHERE BiXoa=0";
               $result = DataProvider::ExecuteQuery($sql);
@@ -20,21 +20,44 @@
               ?>
         </select>
     </div>
+     <div>
+        <span>Loại Sản Phẩm :</span>
+           <select class="form-control" style="width:400px" name="cmbLoai">
+               <?php
+                  $sql = "SELECT *FROM LoaiSanPham WHERE BiXoa = 0";
+                  $result = DataProvider::ExecuteQuery($sql);
+                  while($row1 = mysqli_fetch_array($result)){
+                      ?>
+                      <option value="<?php echo $row1["MaLoaiSanPham"]; ?>"<?php if($row["MaLoaiSanPham"] == $row1["MaLoaiSanPham"]) echo "selected";
+                      ?>><?php echo $row1["TenLoaiSanPham"]; ?></option>
+                            <?php
+                  }
+                  ?>
+                  </select>
+    </div>
+     <div>
+        <span>Xuất xứ :</span>
+        <input class="form-control" style="width:400px" type="text" name="txtXx" id="txtXx"/>
+    </div>
+     <div>
+        <span>Ngày nhập:</span>
+        <input class="form-control" style="width:400px" type="date" name="txtN" id="txtN"/>
+    </div>
     <div>
         <span>Hình</span>
-        <input class="form-control" style="width:350px" type="file" name="fHinh"/>
+        <input class="form-control" style="width:400px" type="file" name="fHinh" id="fHinh"/>
     </div>
     <div>
         <span>Giá</span>
-        <input type="text" class="form-control" style="width:350px" name="txtGia" id="txtGia"/>
+        <input type="text" class="form-control" style="width:400px" name="txtGia" id="txtGia"/>
     </div>
     <div>
         <span>Số lượng tồn</span>
-        <input type="text" class="form-control" style="width:350px" name="txtTon" id="txtTon"/>
+        <input type="text" class="form-control" style="width:400px" name="txtTon" id="txtTon"/>
     </div>
     <div>
         <span>Mô tả</span>
-        <textarea  class="form-control" style="width:350px;height:200px"name="txtMoTa"></textarea>
+        <textarea  class="form-control" style="width:400px;height:200px"name="txtMoTa"></textarea>
     </div>
     <div>
           <button type="submit" value="Thêm mới "   style="margin-left:15%"class="btn btn-success ">Thêm mới</button>
